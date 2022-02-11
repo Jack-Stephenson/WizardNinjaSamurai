@@ -3,7 +3,7 @@ namespace WizardNinjaSamurai
 {
     class Ninja : Human
     {
-        public Ninja(string name) : base(name, 0, 0, 175, 50)
+        public Ninja(string name) : base(name, 10, 10, 175, 50)
         {
         }
         public override int Attack(Human target)
@@ -16,6 +16,7 @@ namespace WizardNinjaSamurai
             }
             int targetHealth=target.GetHealth()-dmg;
             target.SetHealth(targetHealth);
+            Console.WriteLine($"{Name} attacked {target.Name} for {dmg} damage!");
             return dmg;
         }
         public void Steal(Human target)

@@ -1,8 +1,9 @@
+using System;
 namespace WizardNinjaSamurai
 {
     class Wizard : Human
     {
-        public Wizard(string name) : base(name, 0, 25, 0, 50)
+        public Wizard(string name) : base(name, 10, 25, 10, 50)
         {
         }
         public override int Attack(Human target)
@@ -12,6 +13,7 @@ namespace WizardNinjaSamurai
             target.SetHealth(targetHealth);
             int wizardHealth = this.GetHealth() + dmg;
             this.SetHealth(wizardHealth);
+            Console.WriteLine($"{Name} attacked {target.Name} for {dmg} damage!");
             return dmg;
         }
         public void Heal(Human target)
