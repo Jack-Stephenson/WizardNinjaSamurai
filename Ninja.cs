@@ -4,8 +4,7 @@ namespace WizardNinjaSamurai
     class Ninja : Human
     {
         public Ninja(string name) : base(name, 10, 10, 175, 50)
-        {
-        }
+        {}
         public override int Attack(Human target)
         {
             int dmg = 5*this.Dexterity;
